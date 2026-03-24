@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import mell from './mell.jpg';
 
 const SERVICES = [
   {
@@ -159,7 +160,7 @@ function Hero() {
         <div style={{ flex: "0 0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <div style={{ width: "clamp(200px,26vw,300px)", height: "clamp(200px,26vw,300px)", position: "relative" }}>
             <div style={{ position: "absolute", inset: "-3px", borderRadius: "50%", background: "conic-gradient(#00FFFF,#8A2BE2,#00FFFF)", animation: "spin 8s linear infinite" }} />
-            <div style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "#0F0F0F" }} />
+            <div style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "" }} />
             <div style={{
               position: "absolute",
               inset: "5px",
@@ -171,7 +172,7 @@ function Hero() {
               overflow: "hidden"
             }}>
               <img
-                src="/melly.jpg"
+                src={mell}
                 alt="Melly"
                 style={{
                   maxWidth: "100%",
@@ -219,7 +220,7 @@ function About() {
           </h2>
 
           {[
-            "Most Web3 content blends into the background — too technical when it should be human, too vague when it should be sharp, and forgettable when it should build trust.",
+            "Most Web3 content blends into the background too technical when it should be human, too vague when it should be sharp, and forgettable when it should build trust.",
             "I'm Melly. I help founders, protocols, and builders shape narratives that stick. My work lives at the intersection of storytelling and strategy — where words aren't just content, they're architecture.",
             "Whether you need a ghostwritten thread that sparks conversation or a content system that compounds your authority over time, I build everything around one thing: genuine attention.",
           ].map((p, i) => (
@@ -288,7 +289,7 @@ function Contact() {
           <span style={{ color: "#00FFFF", textShadow: "0 0 28px rgba(0,255,255,0.28)" }}>people actually notice.</span>
         </h2>
         <p style={{ fontFamily: "'Syne',sans-serif", fontSize: "1rem", color: "#B0B0B0", maxWidth: "480px", margin: "0 auto 3rem", lineHeight: 1.75 }}>
-          Whether you have a clear brief or just an idea — reach out. The best projects start with a conversation.
+          Whether you have a clear brief or just an idea reach out. The best projects start with a conversation.
         </p>
 
         <a href="mailto:mellyfine400@gmail.com"
@@ -299,7 +300,7 @@ function Contact() {
         </a>
 
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", marginTop: "2rem", flexWrap: "wrap" }}>
-          {[{ label: "X", href: "#", icon: "𝕏", href: "https://x.com/Melly_fine_" }, { label: "Email", href: "mailto:mellyfine400@gmail.com", icon: "✉" }].map(({ label, href, icon }) => (
+          {[{ label: "X", href: "https://x.com/Melly_fine_", icon: "𝕏" }, { label: "Email", href: "mailto:mellyfine400@gmail.com", icon: "✉" }].map(({ label, href, icon }) => (
             <a key={label} href={href}
               style={{ display: "flex", alignItems: "center", gap: "8px", color: "#B0B0B0", textDecoration: "none", fontFamily: "'DM Mono',monospace", fontSize: "0.78rem", letterSpacing: "0.1em", transition: "all 0.25s", padding: "8px 16px", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "3px" }}
               onMouseEnter={(e) => { e.currentTarget.style.color = "#00FFFF"; e.currentTarget.style.borderColor = "rgba(0,255,255,0.3)"; e.currentTarget.style.background = "rgba(0,255,255,0.04)"; }}
